@@ -1650,3 +1650,87 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Fix: Full About Grid Display ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.about-card {
+    background: var(--white);
+    padding: 28px 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200px;
+}
+
+.about-card .about-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.about-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.about-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Highlight card */
+.about-card.highlight-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.about-card.highlight-card .about-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.about-card.highlight-card p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Force all cards to show */
+@media (max-width: 1200px) {
+    .about-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
