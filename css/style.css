@@ -1211,3 +1211,351 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--primary-dark);
     transform: translateY(-4px);
 }
+
+/* ===== Training Announcement Section ===== */
+.training-announcement {
+    position: relative;
+    overflow: hidden;
+}
+
+.training-announcement::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.announcement-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.announcement-content {
+    color: var(--white);
+}
+
+.announcement-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.announcement-badge i {
+    margin-right: 8px;
+}
+
+.announcement-title {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.announcement-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 32px;
+}
+
+.announcement-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.feature-item h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.feature-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-item ul li {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    padding: 4px 0;
+}
+
+.feature-item .fee-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.announcement-contact {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: 32px;
+}
+
+.announcement-contact h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.contact-link i {
+    font-size: 1.2rem;
+}
+
+.whatsapp-link {
+    background: #25D366;
+    color: var(--white);
+}
+
+.whatsapp-link:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.email-link {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+}
+
+.email-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.contact-note {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.announcement-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.announcement-cta .btn {
+    min-width: 180px;
+    justify-content: center;
+}
+
+.announcement-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement-image img {
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.announcement-icon-placeholder {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--white);
+    border: 3px dashed rgba(255, 255, 255, 0.2);
+}
+
+.announcement-icon-placeholder i {
+    font-size: 5rem;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.announcement-icon-placeholder span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .announcement-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .announcement-title {
+        font-size: 1.6rem;
+    }
+    
+    .announcement-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+    }
+    
+    .contact-link {
+        justify-content: center;
+    }
+    
+    .announcement-cta {
+        flex-direction: column;
+    }
+    
+    .announcement-cta .btn {
+        width: 100%;
+    }
+    
+    .announcement-icon-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 3rem;
+    }
+    
+    .announcement-icon-placeholder i {
+        font-size: 3.5rem;
+    }
+}
+/* ===== CCYI Digital Academy Button ===== */
+.academy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #FFB703, #FFA000);
+    color: var(--dark);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.academy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 183, 3, 0.4);
+}
+
+.academy-logo-small {
+    height: 28px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.academy-btn span {
+    white-space: nowrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .academy-btn {
+        display: none;
+    }
+}
+
+/* Academy Banner Section */
+.academy-banner {
+    background: linear-gradient(135deg, var(--dark), var(--dark-light));
+    padding: 40px 0;
+    border-top: 4px solid var(--accent);
+    border-bottom: 4px solid var(--accent);
+}
+
+.academy-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.academy-logo-large {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.academy-logo-large img {
+    height: 60px;
+    width: auto;
+}
+
+.academy-text h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.academy-text p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .academy-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .academy-logo-large {
+        flex-direction: column;
+    }
+}
